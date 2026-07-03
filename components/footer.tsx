@@ -24,16 +24,16 @@ export function Footer() {
                 <Link2 size={20} />
               </a>
               <a
-                href="#"
+                href="/contact"
                 className="bg-white/10 hover:bg-white/20 p-2 rounded transition-colors"
-                aria-label="Message"
+                aria-label="Contact"
               >
                 <MessageCircle size={20} />
               </a>
               <a
-                href="#"
+                href="/services"
                 className="bg-white/10 hover:bg-white/20 p-2 rounded transition-colors"
-                aria-label="Like"
+                aria-label="Services"
               >
                 <Heart size={20} />
               </a>
@@ -88,13 +88,16 @@ export function Footer() {
             </h4>
             <ul className="space-y-3 text-sm text-primary-foreground/80">
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a href="/" className="hover:text-white transition-colors">
                   À propos
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Notre équipe
+                <a
+                  href="/process"
+                  className="hover:text-white transition-colors"
+                >
+                  Notre approche
                 </a>
               </li>
               <li>
@@ -103,8 +106,11 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Blog
+                <a
+                  href="/portfolio"
+                  className="hover:text-white transition-colors"
+                >
+                  Réalisations
                 </a>
               </li>
             </ul>
@@ -157,13 +163,13 @@ export function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-primary-foreground/70">
           <p>© 2026 MB PUB. Tous droits réservés.</p>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-white transition-colors">
+            <a href="/contact" className="hover:text-white transition-colors">
               Mentions légales
             </a>
-            <a href="#" className="hover:text-white transition-colors">
+            <a href="/faq" className="hover:text-white transition-colors">
               Politique de confidentialité
             </a>
-            <a href="#" className="hover:text-white transition-colors">
+            <a href="/services" className="hover:text-white transition-colors">
               Conditions d&apos;utilisation
             </a>
           </div>
