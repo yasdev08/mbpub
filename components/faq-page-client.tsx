@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { FinalCTA } from "@/components/final-cta";
@@ -72,13 +73,25 @@ export default function FAQPageClient() {
 
       <section className="bg-primary text-primary-foreground py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl md:text-5xl font-display font-bold mb-4 text-balance">
-            Questions Fréquentes
-          </h1>
-          <p className="text-xl opacity-90 max-w-2xl">
-            Retrouvez les réponses aux questions les plus courantes sur nos
-            services.
-          </p>
+          <div className="grid items-center gap-10 lg:grid-cols-[1.05fr_0.95fr]">
+            <div>
+              <h1 className="text-4xl md:text-5xl font-display font-bold mb-4 text-balance">
+                Questions Fréquentes
+              </h1>
+              <p className="text-xl opacity-90 max-w-2xl">
+                Retrouvez les réponses aux questions les plus courantes sur nos
+                services.
+              </p>
+            </div>
+            <div className="relative min-h-[260px] overflow-hidden rounded-[1.5rem] border border-white/20 bg-white/10 p-3 shadow-2xl">
+              <Image
+                src="/placeholder-logo.svg"
+                alt="Visuel FAQ MB PUB"
+                fill
+                className="rounded-[1.1rem] object-cover"
+              />
+            </div>
+          </div>
         </div>
       </section>
 

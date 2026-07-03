@@ -1,93 +1,84 @@
 "use client";
 
-import { ArrowRight } from "lucide-react";
+import Image from "next/image";
+import { ArrowRight, Sparkles } from "lucide-react";
 
 export function Hero() {
   return (
-    <section className="relative pt-20 pb-32 px-4 sm:px-6 lg:px-8 bg-background overflow-hidden">
-      <div className="max-w-7xl mx-auto">
-        {/* Decorative elements */}
-        <div className="absolute top-10 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -z-10"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-muted blur-3xl -z-10"></div>
+    <section className="relative overflow-hidden bg-[radial-gradient(circle_at_top_left,_rgba(222,48,13,0.12),_transparent_42%),linear-gradient(135deg,#fffaf7_0%,#ffffff_100%)] px-4 pb-24 pt-20 sm:px-6 lg:px-8">
+      <div className="absolute inset-0 bg-[linear-gradient(120deg,transparent_0%,rgba(255,255,255,0.45)_100%)]" />
+      <div className="absolute left-0 top-10 h-72 w-72 rounded-full bg-primary/10 blur-3xl" />
+      <div className="absolute bottom-0 right-0 h-80 w-80 rounded-full bg-orange-200/40 blur-3xl" />
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left Content */}
-          <div className="space-y-8">
-            <div>
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold leading-tight text-balance">
-                Transformez votre visibilité
-              </h1>
-              <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-                Solutions marketing complètes pour les entreprises locales. Du
-                digital à la signalétique, nous créons une présence cohérente
-                qui attire et fidélise vos clients.
-              </p>
-            </div>
-
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4">
-              <a
-                href="#contact"
-                className="bg-primary text-primary-foreground px-8 py-4 rounded-lg font-semibold hover:bg-primary/90 transition-all transform hover:scale-105 inline-flex items-center gap-2 w-fit"
-              >
-                Demander un devis
-                <ArrowRight size={20} />
-              </a>
-              <a
-                href="#services"
-                className="border-2 border-primary text-primary px-8 py-4 rounded-lg font-semibold hover:bg-primary/5 transition-colors inline-flex items-center gap-2 w-fit"
-              >
-                Voir nos services
-              </a>
-            </div>
-
-            {/* Trust Indicators */}
-            <div className="flex gap-8 pt-8 border-t border-border">
-              <div>
-                <p className="text-3xl font-display font-bold text-primary">
-                  200+
-                </p>
-                <p className="text-sm text-muted-foreground">
-                  Clients satisfaits
-                </p>
-              </div>
-              <div>
-                <p className="text-3xl font-display font-bold text-primary">
-                  7+
-                </p>
-                <p className="text-sm text-muted-foreground">
-                  Ans d&apos;expérience
-                </p>
-              </div>
-              <div>
-                <p className="text-3xl font-display font-bold text-primary">
-                  98%
-                </p>
-                <p className="text-sm text-muted-foreground">
-                  Satisfaction client
-                </p>
-              </div>
-            </div>
+      <div className="relative mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[1.05fr_0.95fr]">
+        <div className="space-y-8">
+          <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-white/80 px-4 py-2 text-sm font-medium text-primary shadow-sm backdrop-blur">
+            <Sparkles size={16} />
+            Communication visuelle premium pour entreprises ambitieuses
           </div>
 
-          {/* Right Visual */}
-          <div className="relative hidden lg:block h-96">
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-primary/5 rounded-2xl border border-primary/20"></div>
-            <div className="absolute top-4 left-4 right-4 bottom-4 bg-primary/5 rounded-lg flex items-center justify-center">
-              <div className="text-center space-y-4">
-                <div className="inline-block bg-primary/10 p-4 rounded-lg">
-                  <div className="w-16 h-16 bg-primary/20 rounded-lg flex items-center justify-center">
-                    <span className="text-2xl">🎨</span>
-                  </div>
-                </div>
-                <p className="font-display font-semibold text-foreground">
-                  Créativité + Stratégie
-                </p>
-                <p className="text-sm text-muted-foreground">
-                  Résultats mesurables
-                </p>
-              </div>
+          <div className="space-y-5">
+            <h1 className="max-w-3xl text-5xl font-display font-bold leading-[0.95] text-foreground md:text-6xl lg:text-7xl">
+              Donnez à votre marque une présence qui fait rayonner votre
+              activité.
+            </h1>
+            <p className="max-w-2xl text-lg leading-8 text-muted-foreground">
+              Nous accompagnons les entreprises avec des solutions de branding,
+              d’impression, de signalétique et de communication visuelle qui
+              renforcent la confiance et accélèrent les conversions.
+            </p>
+          </div>
+
+          <div className="flex flex-col gap-3 sm:flex-row">
+            <a
+              href="#contact"
+              className="inline-flex w-fit items-center gap-2 rounded-full bg-primary px-8 py-4 font-semibold text-primary-foreground transition-all hover:-translate-y-0.5 hover:bg-primary/90"
+            >
+              Demander un devis
+              <ArrowRight size={18} />
+            </a>
+            <a
+              href="#portfolio"
+              className="inline-flex w-fit items-center gap-2 rounded-full border border-primary/20 bg-white/80 px-8 py-4 font-semibold text-primary transition-all hover:-translate-y-0.5 hover:border-primary hover:bg-primary/5"
+            >
+              Découvrir nos réalisations
+            </a>
+          </div>
+
+          <div className="grid gap-6 border-t border-border pt-8 sm:grid-cols-3">
+            <div>
+              <p className="text-3xl font-display font-bold text-primary">
+                +500
+              </p>
+              <p className="text-sm text-muted-foreground">projets réalisés</p>
             </div>
+            <div>
+              <p className="text-3xl font-display font-bold text-primary">
+                +10 ans
+              </p>
+              <p className="text-sm text-muted-foreground">d&apos;expérience</p>
+            </div>
+            <div>
+              <p className="text-3xl font-display font-bold text-primary">
+                +300
+              </p>
+              <p className="text-sm text-muted-foreground">
+                clients satisfaits
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="relative hidden lg:block">
+          <div className="absolute inset-0 rounded-[2rem] bg-gradient-to-br from-primary/20 via-primary/5 to-transparent" />
+          <div className="relative overflow-hidden rounded-[2rem] border border-border bg-white/70 p-3 shadow-[0_30px_90px_rgba(15,23,42,0.12)] backdrop-blur">
+            <Image
+              src="/hero.jpg"
+              alt="Équipe MB PUB travaillant sur une installation de signalétique et de communication visuelle"
+              width={900}
+              height={1100}
+              className="h-[580px] w-full rounded-[1.5rem] object-cover"
+            />
           </div>
         </div>
       </div>

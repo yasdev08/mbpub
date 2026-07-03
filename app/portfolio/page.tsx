@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { FinalCTA } from "@/components/final-cta";
@@ -23,7 +24,7 @@ export default function PortfolioPage() {
       description:
         "Refonte complète de la présence digitale et mise en place de campaigns réseaux sociaux",
       results: "+450% de réservations en ligne",
-      image: "/portfolio/restaurant.jpg",
+      image: "resto.jpg",
     },
     {
       id: 2,
@@ -33,7 +34,7 @@ export default function PortfolioPage() {
       description:
         "Création d'identité visuelle et mise en place d'une stratégie d'acquisition",
       results: "+280 membres en 6 mois",
-      image: "/portfolio/fitness.jpg",
+      image: "boutique.jpg",
     },
     {
       id: 3,
@@ -83,13 +84,25 @@ export default function PortfolioPage() {
       {/* Hero Section */}
       <section className="bg-primary text-primary-foreground py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl md:text-5xl font-display font-bold mb-4 text-balance">
-            Notre Portfolio
-          </h1>
-          <p className="text-xl opacity-90 max-w-2xl">
-            Découvrez nos réalisations et les succès que nous avons créés pour
-            nos clients.
-          </p>
+          <div className="grid items-center gap-10 lg:grid-cols-[1.05fr_0.95fr]">
+            <div>
+              <h1 className="text-4xl md:text-5xl font-display font-bold mb-4 text-balance">
+                Notre Portfolio
+              </h1>
+              <p className="text-xl opacity-90 max-w-2xl">
+                Découvrez nos réalisations et les succès que nous avons créés
+                pour nos clients.
+              </p>
+            </div>
+            <div className="relative min-h-[260px] overflow-hidden rounded-[1.5rem] border border-white/20 bg-white/10 p-3 shadow-2xl">
+              <Image
+                src="portfo.jpg"
+                alt="Visuel de portfolio MB PUB"
+                fill
+                className="rounded-[1.1rem] object-cover"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
@@ -102,14 +115,19 @@ export default function PortfolioPage() {
                 key={project.id}
                 className="bg-white rounded-lg overflow-hidden border border-border hover:shadow-lg transition-shadow group cursor-pointer"
               >
-                {/* Placeholder for image */}
-                <div className="bg-gradient-to-br from-primary/20 to-primary/5 h-48 flex items-center justify-center overflow-hidden relative">
-                  <div className="text-center">
-                    <div className="text-4xl font-display font-bold text-primary opacity-20">
-                      {project.category.charAt(0)}
-                    </div>
-                  </div>
-                  <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors" />
+                <div className="relative h-48 overflow-hidden">
+                  <Image
+                    src={
+                      project.image.startsWith("/")
+                        ? project.image
+                        : `/${project.image}`
+                    }
+                    alt={project.title}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-primary/0 transition-colors group-hover:bg-primary/10" />
                 </div>
 
                 <div className="p-6">

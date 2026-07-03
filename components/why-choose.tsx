@@ -13,64 +13,70 @@ export function WhyChoose() {
   const reasons = [
     {
       icon: Target,
-      title: "Solution complète",
-      description: "Digital et physique intégrés pour une stratégie cohérente",
+      title: "Approche complète",
+      description:
+        "Un positionnement digital et physique aligné pour une image cohérente et impactante.",
     },
     {
       icon: Users,
       title: "Expertise locale",
       description:
-        "Nous comprenons les besoins des entreprises de votre région",
+        "Nous comprenons les besoins spécifiques des entreprises qui veulent se démarquer sur leur territoire.",
     },
     {
       icon: Zap,
       title: "Résultats mesurables",
-      description: "Rapports détaillés et ROI transparent",
+      description:
+        "Des décisions guidées par des objectifs concrets, des indicateurs et une logique de performance.",
     },
     {
       icon: Award,
-      title: "Design professionnel",
-      description: "Travail premium qui reflète la qualité de votre marque",
+      title: "Design premium",
+      description:
+        "Des créations soignées, modernes et capables de refléter la qualité de votre marque.",
     },
     {
       icon: Headphones,
-      title: "Accompagnement personnalisé",
-      description: "Team dédiée à votre succès",
+      title: "Accompagnement sur mesure",
+      description:
+        "Un interlocuteur dédié à votre projet, de la première idée au résultat final.",
     },
     {
       icon: CheckCircle2,
       title: "Processus éprouvé",
-      description: "7 ans d'expérience et 200+ clients satisfaits",
+      description:
+        "Une méthode fiable, testée et pensée pour les entreprises ambitieuses.",
     },
   ];
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-background">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-display font-bold mb-4 text-balance">
-            Pourquoi choisir MB PUB ?
+    <section className="bg-background px-4 py-24 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl">
+        <div className="mb-16 max-w-3xl">
+          <h2 className="mb-4 text-4xl font-display font-bold text-foreground md:text-5xl">
+            Pourquoi les entreprises nous choisissent.
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Nous sommes le partenaire marketing que votre entreprise mérite
+          <p className="text-lg leading-8 text-muted-foreground">
+            Parce que nous allions créativité, qualité de production et
+            stratégie commerciale pour créer une vraie différence.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
           {reasons.map((reason, idx) => {
             const Icon = reason.icon;
             return (
               <div
                 key={idx}
-                className="group p-8 rounded-xl border border-border bg-white hover:shadow-xl hover:border-primary transition-all duration-300"
+                className="group rounded-[1.5rem] border border-border bg-white p-8 shadow-sm transition-all hover:-translate-y-1 hover:border-primary hover:shadow-xl"
               >
-                <div className="bg-primary/10 w-14 h-14 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-white transition-all">
-                  <Icon className="w-7 h-7 text-primary group-hover:text-white" />
+                <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary transition-all group-hover:bg-primary group-hover:text-white">
+                  <Icon className="h-7 w-7" />
                 </div>
-                <h3 className="font-display font-bold text-xl mb-2 text-foreground">
+                <h3 className="mb-2 font-display text-xl font-semibold text-foreground">
                   {reason.title}
                 </h3>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="leading-7 text-muted-foreground">
                   {reason.description}
                 </p>
               </div>
@@ -78,14 +84,13 @@ export function WhyChoose() {
           })}
         </div>
 
-        {/* Bottom CTA */}
         <div className="mt-16 text-center">
-          <p className="text-lg text-foreground mb-6">
-            Prêt à transformer votre présence marketing ?
+          <p className="mb-6 text-lg text-foreground">
+            Prêt à donner à votre marque une nouvelle dimension ?
           </p>
           <a
             href="#contact"
-            className="bg-primary text-primary-foreground px-8 py-4 rounded-lg font-semibold hover:bg-primary/90 transition-all transform hover:scale-105 inline-block"
+            className="inline-flex rounded-full bg-primary px-8 py-4 font-semibold text-primary-foreground transition-all hover:-translate-y-0.5 hover:bg-primary/90"
           >
             Commençons ensemble
           </a>

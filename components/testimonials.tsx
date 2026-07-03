@@ -7,136 +7,98 @@ export function Testimonials() {
     {
       name: "Sophie Martin",
       title: "Directrice, Salon Beauté Prestige",
-      image: "👩‍💼",
       quote:
-        "Avant MB PUB, nos réseaux sociaux stagnaient. En 3 mois, nous avons triplé nos demandes de rendez-vous. Merci pour cette transformation !",
+        "Nous avons enfin une image de marque à la hauteur de notre ambition. Le travail de MB PUB a transformé notre visibilité locale en vraie opportunité commerciale.",
       rating: 5,
     },
     {
       name: "Thomas Dupont",
       title: "Propriétaire, Restaurant La Table",
-      image: "👨‍💼",
       quote:
-        "L'enseigne et le branding qu'ils ont créés reflètent parfaitement notre vision. Les clients nous trouvent facilement et adorent notre identité visuelle.",
+        "Le branding et la signalétique ont immédiatement renforcé notre identité. Les clients nous reconnaissent mieux et nous recommandent plus facilement.",
       rating: 5,
     },
     {
       name: "Isabelle Leclerc",
       title: "Gérante, Boutique Mode",
-      image: "👩‍💼",
       quote:
-        "Solution complète incroyable ! Entre le site web, Instagram et les affiches, notre visibilité a explosé. ROI très rapide.",
-      rating: 5,
-    },
-    {
-      name: "Marc Beaumont",
-      title: "Directeur, Garage Auto",
-      image: "👨‍💼",
-      quote:
-        "Les wraps sur nos véhicules font sensation en ville. La qualité et le service de MB PUB sont vraiment professionnels.",
-      rating: 5,
-    },
-    {
-      name: "Claire Rossi",
-      title: "CEO, Cabinet Médical",
-      image: "👩‍💼",
-      quote:
-        "Enfin une agence qui comprend les besoins spécifiques des services. Très réactifs et créatifs.",
-      rating: 5,
-    },
-    {
-      name: "Antoine Lefevre",
-      title: "Propriétaire, Hôtel Boutique",
-      image: "👨‍💼",
-      quote:
-        "Grâce à leurs campagnes digitales et aux photos professionnelles, notre taux d'occupation s'est amélioré de façon significative.",
+        "Le niveau de professionnalisme et de créativité est remarquable. Chaque support, du site au print, est pensé avec précision et élégance.",
       rating: 5,
     },
   ];
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-display font-bold mb-4 text-balance">
-            Ce que nos clients disent
+    <section className="bg-muted/30 px-4 py-24 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl">
+        <div className="mb-16 max-w-3xl">
+          <h2 className="mb-4 text-4xl font-display font-bold text-foreground md:text-5xl">
+            Ce que nos clients disent de notre travail.
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Plus de 500 entreprises nous font confiance pour transformer leur
-            marketing
+          <p className="text-lg leading-8 text-muted-foreground">
+            Des entreprises qui ont choisi la précision, la créativité et
+            l’impact visuel pour se distinguer.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           {testimonials.map((testimonial, idx) => (
             <div
               key={idx}
-              className="bg-background border border-border rounded-xl p-8 hover:shadow-lg hover:border-primary transition-all"
+              className="rounded-[1.5rem] border border-border bg-white p-8 shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl"
             >
-              {/* Stars */}
-              <div className="flex gap-1 mb-4">
+              <div className="mb-4 flex gap-1">
                 {[...Array(testimonial.rating)].map((_, i) => (
                   <Star
                     key={i}
-                    size={18}
+                    size={16}
                     className="fill-primary text-primary"
                   />
                 ))}
               </div>
-
-              {/* Quote */}
-              <p className="text-foreground mb-6 leading-relaxed italic">
-                "{testimonial.quote}"
+              <p className="mb-6 text-base leading-8 text-foreground">
+                “{testimonial.quote}”
               </p>
-
-              {/* Author */}
-              <div className="flex items-center gap-3">
-                <span className="text-3xl">{testimonial.image}</span>
-                <div>
-                  <p className="font-display font-semibold text-foreground">
-                    {testimonial.name}
-                  </p>
-                  <p className="text-xs text-muted-foreground">
-                    {testimonial.title}
-                  </p>
-                </div>
+              <div>
+                <p className="font-display font-semibold text-foreground">
+                  {testimonial.name}
+                </p>
+                <p className="text-sm text-muted-foreground">
+                  {testimonial.title}
+                </p>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Social Proof */}
-        <div className="mt-16 bg-primary/5 border border-primary/20 rounded-xl p-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+        <div className="mt-16 rounded-[2rem] border border-primary/20 bg-primary/5 p-8">
+          <div className="grid grid-cols-1 gap-8 text-center md:grid-cols-4">
             <div>
-              <p className="text-4xl font-display font-bold text-primary mb-2">
-                200+
+              <p className="mb-2 text-4xl font-display font-bold text-primary">
+                +300
               </p>
               <p className="text-sm text-muted-foreground">
-                Clients satisfaits
+                clients satisfaits
               </p>
             </div>
             <div>
-              <p className="text-4xl font-display font-bold text-primary mb-2">
+              <p className="mb-2 text-4xl font-display font-bold text-primary">
                 98%
               </p>
-              <p className="text-sm text-muted-foreground">
-                Taux de satisfaction
-              </p>
+              <p className="text-sm text-muted-foreground">de satisfaction</p>
             </div>
             <div>
-              <p className="text-4xl font-display font-bold text-primary mb-2">
-                7+
+              <p className="mb-2 text-4xl font-display font-bold text-primary">
+                +10 ans
               </p>
-              <p className="text-sm text-muted-foreground">
-                Années d&apos;expérience
-              </p>
+              <p className="text-sm text-muted-foreground">d&apos;expérience</p>
             </div>
             <div>
-              <p className="text-4xl font-display font-bold text-primary mb-2">
-                1000+
+              <p className="mb-2 text-4xl font-display font-bold text-primary">
+                Toute l’Algérie
               </p>
-              <p className="text-sm text-muted-foreground">Projets réussis</p>
+              <p className="text-sm text-muted-foreground">
+                interventions réalisées
+              </p>
             </div>
           </div>
         </div>

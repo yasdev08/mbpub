@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { FinalCTA } from "@/components/final-cta";
@@ -122,13 +123,25 @@ export default function ProcessPage() {
       {/* Hero Section */}
       <section className="bg-primary text-primary-foreground py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl md:text-5xl font-display font-bold mb-4 text-balance">
-            Notre Méthodologie
-          </h1>
-          <p className="text-xl opacity-90 max-w-2xl">
-            Un processus structuré et éprouvé pour garantir la réussite de vos
-            projets marketing.
-          </p>
+          <div className="grid items-center gap-10 lg:grid-cols-[1.05fr_0.95fr]">
+            <div>
+              <h1 className="text-4xl md:text-5xl font-display font-bold mb-4 text-balance">
+                Notre Méthodologie
+              </h1>
+              <p className="text-xl opacity-90 max-w-2xl">
+                Un processus structuré et éprouvé pour garantir la réussite de
+                vos projets marketing.
+              </p>
+            </div>
+            <div className="relative min-h-[260px] overflow-hidden rounded-[1.5rem] border border-white/20 bg-white/10 p-3 shadow-2xl">
+              <Image
+                src="/project.jpg"
+                alt="Illustration du processus de travail MB PUB"
+                fill
+                className="rounded-[1.1rem] object-cover"
+              />
+            </div>
+          </div>
         </div>
       </section>
 

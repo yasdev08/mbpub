@@ -6,30 +6,29 @@ export function FinalCTA() {
   return (
     <section
       id="contact"
-      className="py-20 px-4 sm:px-6 lg:px-8 bg-primary text-primary-foreground relative overflow-hidden"
+      className="relative overflow-hidden bg-primary px-4 py-24 text-primary-foreground sm:px-6 lg:px-8"
     >
-      {/* Decorative elements */}
-      <div className="absolute top-10 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl -z-10"></div>
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-white/5 rounded-full blur-3xl -z-10"></div>
+      <div className="absolute left-0 top-8 h-72 w-72 rounded-full bg-white/10 blur-3xl" />
+      <div className="absolute bottom-0 right-0 h-80 w-80 rounded-full bg-white/10 blur-3xl" />
 
-      <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-display font-bold mb-4 text-balance">
-            Prêt à transformer votre marketing ?
+      <div className="relative mx-auto max-w-5xl">
+        <div className="mb-12 text-center">
+          <h2 className="mb-4 text-4xl font-display font-bold md:text-5xl">
+            Prêt à donner une nouvelle dimension à votre image de marque ?
           </h2>
-          <p className="text-lg text-primary-foreground/90 max-w-2xl mx-auto">
-            Obtenez votre devis gratuit et personnalisé en moins de 24h
+          <p className="mx-auto max-w-2xl text-lg leading-8 text-primary-foreground/90">
+            Accompagnons votre entreprise avec des solutions professionnelles
+            d’impression, de signalétique et de communication visuelle.
           </p>
         </div>
 
-        {/* Quick Contact Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+        <div className="mb-10 grid gap-6 md:grid-cols-2">
           <a
             href="tel:+213553924419"
-            className="bg-white/10 hover:bg-white/20 rounded-lg p-6 transition-colors border border-white/20"
+            className="rounded-[1.25rem] border border-white/20 bg-white/10 p-6 transition-all hover:bg-white/20"
           >
-            <div className="flex items-center gap-3 mb-2">
-              <Phone size={24} />
+            <div className="mb-2 flex items-center gap-3">
+              <Phone size={22} />
               <span className="font-display font-semibold">Nous appeler</span>
             </div>
             <p className="text-sm text-primary-foreground/80">
@@ -39,10 +38,10 @@ export function FinalCTA() {
 
           <a
             href="mailto:mbpublicite31@gmail.com"
-            className="bg-white/10 hover:bg-white/20 rounded-lg p-6 transition-colors border border-white/20"
+            className="rounded-[1.25rem] border border-white/20 bg-white/10 p-6 transition-all hover:bg-white/20"
           >
-            <div className="flex items-center gap-3 mb-2">
-              <Mail size={24} />
+            <div className="mb-2 flex items-center gap-3">
+              <Mail size={22} />
               <span className="font-display font-semibold">Nous écrire</span>
             </div>
             <p className="text-sm text-primary-foreground/80">
@@ -51,79 +50,79 @@ export function FinalCTA() {
           </a>
         </div>
 
-        {/* Form CTA */}
-        <div className="bg-white/95 rounded-xl p-8 md:p-12">
+        <div className="rounded-[2rem] bg-white/95 p-8 text-foreground shadow-2xl md:p-12">
           <form className="space-y-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid gap-6 md:grid-cols-2">
               <div>
-                <label className="block text-sm font-medium text-foreground mb-2">
+                <label className="mb-2 block text-sm font-medium text-foreground">
                   Nom complet
                 </label>
                 <input
                   type="text"
                   placeholder="Votre nom"
-                  className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+                  className="w-full rounded-xl border border-border bg-background px-4 py-3 text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
                   required
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-foreground mb-2">
+                <label className="mb-2 block text-sm font-medium text-foreground">
                   Email
                 </label>
                 <input
                   type="email"
                   placeholder="votre@email.com"
-                  className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+                  className="w-full rounded-xl border border-border bg-background px-4 py-3 text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
                   required
                 />
               </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid gap-6 md:grid-cols-2">
               <div>
-                <label className="block text-sm font-medium text-foreground mb-2">
+                <label className="mb-2 block text-sm font-medium text-foreground">
                   Téléphone
                 </label>
                 <input
                   type="tel"
-                  placeholder="+33 6 12 34 56 78"
-                  className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+                  placeholder="+213 6 12 34 56 78"
+                  className="w-full rounded-xl border border-border bg-background px-4 py-3 text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-foreground mb-2">
-                  Quel service vous intéresse ?
+                <label className="mb-2 block text-sm font-medium text-foreground">
+                  Service souhaité
                 </label>
-                <select className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary">
+                <select className="w-full rounded-xl border border-border bg-background px-4 py-3 text-foreground focus:outline-none focus:ring-2 focus:ring-primary">
                   <option>Sélectionnez une option</option>
-                  <option>Solutions Digitales</option>
-                  <option>Solutions Physiques</option>
-                  <option>Solution Complète</option>
+                  <option>Impression numérique</option>
+                  <option>Enseignes lumineuses LED</option>
+                  <option>Branding & signalétique</option>
+                  <option>Solution complète</option>
                 </select>
               </div>
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-foreground mb-2">
+              <label className="mb-2 block text-sm font-medium text-foreground">
                 Message
               </label>
               <textarea
                 placeholder="Parlez-nous de votre projet..."
                 rows={5}
-                className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary resize-none"
+                className="w-full resize-none rounded-xl border border-border bg-background px-4 py-3 text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
               ></textarea>
             </div>
 
             <button
               type="submit"
-              className="w-full bg-primary text-primary-foreground py-4 rounded-lg font-display font-semibold hover:bg-primary/90 transition-all transform hover:scale-105 flex items-center justify-center gap-2"
+              className="flex w-full items-center justify-center gap-2 rounded-full bg-primary px-6 py-4 font-semibold text-primary-foreground transition-all hover:-translate-y-0.5 hover:bg-primary/90"
             >
               Demander mon devis gratuitement
-              <ArrowRight size={20} />
+              <ArrowRight size={18} />
             </button>
 
-            <p className="text-xs text-muted-foreground text-center">
-              Nous répondons à toutes les demandes dans les 24 heures
+            <p className="text-center text-xs text-muted-foreground">
+              Nous répondons à toutes les demandes dans les 24 heures.
             </p>
           </form>
         </div>

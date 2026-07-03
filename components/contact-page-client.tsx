@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { useState } from "react";
@@ -76,13 +77,25 @@ export default function ContactPageClient() {
 
       <section className="bg-primary text-primary-foreground py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl md:text-5xl font-display font-bold mb-4 text-balance">
-            Parlons de Votre Projet
-          </h1>
-          <p className="text-xl opacity-90 max-w-2xl">
-            Contactez notre équipe pour une consultation gratuite et découvrez
-            comment nous pouvons transformer votre visibilité.
-          </p>
+          <div className="grid items-center gap-10 lg:grid-cols-[1.05fr_0.95fr]">
+            <div>
+              <h1 className="text-4xl md:text-5xl font-display font-bold mb-4 text-balance">
+                Parlons de Votre Projet
+              </h1>
+              <p className="text-xl opacity-90 max-w-2xl">
+                Contactez notre équipe pour une consultation gratuite et
+                découvrez comment nous pouvons transformer votre visibilité.
+              </p>
+            </div>
+            <div className="relative min-h-[260px] overflow-hidden rounded-[1.5rem] border border-white/20 bg-white/10 p-3 shadow-2xl">
+              <Image
+                src="/project.jpg"
+                alt="Équipe MB PUB en consultation"
+                fill
+                className="rounded-[1.1rem] object-cover"
+              />
+            </div>
+          </div>
         </div>
       </section>
 

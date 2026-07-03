@@ -1,106 +1,122 @@
-'use client'
+"use client";
 
-import { Eye } from 'lucide-react'
+import Image from "next/image";
+import { ArrowRight, Eye } from "lucide-react";
 
 export function Portfolio() {
   const projects = [
     {
       id: 1,
-      title: 'E-Commerce Boutique Locale',
-      category: 'Digital',
-      description: 'Site e-commerce + réseaux sociaux',
-      stats: '+250% ventes online'
+      title: "Identité digitale pour boutique locale",
+      category: "Branding & web",
+      description:
+        "Un univers visuel cohérent, un site moderne et une présence digitale pensée pour convertir.",
+      stats: "+250% de visibilité",
+      image: "/resto.jpg",
     },
     {
       id: 2,
-      title: 'Cabaret Restaurant Prestige',
-      category: 'Digital + Physique',
-      description: 'Branding complet + signalétique',
-      stats: '+40% réservations'
+      title: "Signalétique premium pour restaurant",
+      category: "Signalétique",
+      description:
+        "Une façade et une communication intérieure qui rehaussent l’expérience client dès l’entrée.",
+      stats: "+40% de réservations",
+      image: "/placeholder-logo.png",
     },
     {
       id: 3,
-      title: 'Salon de Beauté Moderne',
-      category: 'Digital',
-      description: 'Instagram ads + booking system',
-      stats: '+300% demandes'
+      title: "Campagne visuelle pour salon de beauté",
+      category: "Marketing visuel",
+      description:
+        "Des supports modernes et des créations pensées pour générer des demandes qualifiées.",
+      stats: "+300% de demandes",
+      image: "/placeholder-user.jpg",
     },
     {
       id: 4,
-      title: 'Garage Automobile Premium',
-      category: 'Physique',
-      description: 'Enseigne + wraps véhicules',
-      stats: '+85% visibilité'
+      title: "Habillage de flotte automobile",
+      category: "Mobilité publicitaire",
+      description:
+        "Un véhicule transformé en ambassadeur de marque, visible partout où il passe.",
+      stats: "+85% de notoriété",
+      image: "/placeholder.svg",
     },
     {
       id: 5,
-      title: 'Cabinet Dentaire',
-      category: 'Digital + Physique',
-      description: 'Site web + Google Business',
-      stats: '+120% patients'
+      title: "Présence locale pour cabinet médical",
+      category: "Digital & physique",
+      description:
+        "Une image de marque soignée associée à une stratégie locale performante.",
+      stats: "+120% de prise de rendez-vous",
+      image: "/logo.png",
     },
     {
       id: 6,
-      title: 'Hôtel Boutique',
-      category: 'Digital',
-      description: 'Photos pro + campagnes ciblées',
-      stats: '+95% taux occupation'
+      title: "Communication visuelle d’hôtel boutique",
+      category: "Événementiel & branding",
+      description:
+        "Une expérience visuelle cohérente, élégante et mémorable à chaque point de contact.",
+      stats: "+95% de satisfaction",
+      image: "/placeholder-logo.svg",
     },
-  ]
+  ];
 
   return (
-    <section id="portfolio" className="py-20 px-4 sm:px-6 lg:px-8 bg-background">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-display font-bold mb-4 text-balance">
-            Nos Réalisations
+    <section
+      id="portfolio"
+      className="bg-background px-4 py-24 sm:px-6 lg:px-8"
+    >
+      <div className="mx-auto max-w-7xl">
+        <div className="mb-16 max-w-3xl">
+          <h2 className="mb-4 text-4xl font-display font-bold text-foreground md:text-5xl">
+            Des réalisations qui renforcent la perception de votre marque.
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Découvrez comment nous avons transformé le marketing de nos clients
+          <p className="text-lg leading-8 text-muted-foreground">
+            Chaque projet combine créativité, stratégie et excellence
+            d’exécution pour vous aider à gagner en visibilité.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
           {projects.map((project) => (
             <div
               key={project.id}
-              className="group relative bg-muted rounded-xl overflow-hidden border border-border hover:border-primary transition-all hover:shadow-xl"
+              className="group relative overflow-hidden rounded-[1.75rem] border border-border bg-white shadow-sm transition-all hover:-translate-y-1 hover:shadow-2xl"
             >
-              {/* Background Gradient */}
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5 group-hover:from-primary/30 group-hover:to-primary/10 transition-all"></div>
-
-              {/* Content */}
-              <div className="relative p-8 h-80 flex flex-col justify-between">
-                {/* Category Badge */}
-                <div className="inline-flex">
-                  <span className="bg-primary text-primary-foreground text-xs font-semibold px-3 py-1 rounded-full w-fit">
-                    {project.category}
-                  </span>
+              <div className="relative h-72 overflow-hidden">
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                <div className="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-primary">
+                  {project.category}
                 </div>
+              </div>
 
-                {/* Middle Content */}
-                <div>
-                  <h3 className="text-2xl font-display font-bold text-foreground mb-2">
-                    {project.title}
-                  </h3>
-                  <p className="text-sm text-muted-foreground">
-                    {project.description}
-                  </p>
-                </div>
-
-                {/* Stats & CTA */}
-                <div className="flex items-end justify-between">
+              <div className="relative p-8">
+                <h3 className="mb-2 font-display text-2xl font-semibold text-foreground">
+                  {project.title}
+                </h3>
+                <p className="mb-6 text-sm leading-7 text-muted-foreground">
+                  {project.description}
+                </p>
+                <div className="flex items-center justify-between border-t border-border pt-4">
                   <div>
-                    <p className="text-sm text-muted-foreground mb-1">Résultat</p>
-                    <p className="text-lg font-display font-bold text-primary">
+                    <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground">
+                      Résultat
+                    </p>
+                    <p className="font-display text-lg font-semibold text-primary">
                       {project.stats}
                     </p>
                   </div>
                   <button
-                    className="bg-primary text-primary-foreground p-3 rounded-full group-hover:scale-110 transition-transform"
-                    aria-label="View project"
+                    className="rounded-full bg-primary p-3 text-primary-foreground transition-transform hover:scale-110"
+                    aria-label={`Voir le projet ${project.title}`}
                   >
-                    <Eye size={20} />
+                    <Eye size={18} />
                   </button>
                 </div>
               </div>
@@ -108,19 +124,20 @@ export function Portfolio() {
           ))}
         </div>
 
-        {/* Portfolio CTA */}
         <div className="mt-16 text-center">
-          <p className="text-lg text-foreground mb-6">
-            Voyez comment nous pouvons transformer votre entreprise
+          <p className="mb-6 text-lg text-foreground">
+            Votre prochain projet mérite une identité aussi forte que votre
+            ambition.
           </p>
           <a
             href="#contact"
-            className="bg-primary text-primary-foreground px-8 py-4 rounded-lg font-semibold hover:bg-primary/90 transition-all transform hover:scale-105 inline-block"
+            className="inline-flex items-center gap-2 rounded-full bg-primary px-8 py-4 font-semibold text-primary-foreground transition-all hover:-translate-y-0.5 hover:bg-primary/90"
           >
             Voir votre cas
+            <ArrowRight size={18} />
           </a>
         </div>
       </div>
     </section>
-  )
+  );
 }
