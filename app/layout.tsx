@@ -16,7 +16,7 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://mbpub31.com";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://mbpub.vercel.app/";
 const defaultTitle = "MB PUB | Agence marketing digital & publicité physique";
 const defaultDescription =
   "MB PUB accompagne les entreprises locales avec des solutions marketing digitales et physiques pour gagner en visibilité, générer des leads et transformer leur image.";

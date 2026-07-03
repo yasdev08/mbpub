@@ -4,8 +4,8 @@ const organizationData = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "MB PUB",
-  url: "https://mbpub31.com",
-  logo: "https://mbpub31.com/logo1.png",
+  url: "https://mbpub.vercel.app/",
+  logo: "https://mbpub.vercel.app/logo1.png",
   sameAs: ["https://lnk.bio/mbpub31"],
   contactPoint: [
     {
@@ -23,8 +23,8 @@ const localBusinessData = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   name: "MB PUB",
-  image: "https://mbpub31.com/logo1.png",
-  url: "https://mbpub31.com",
+  image: "https://mbpub.vercel.app/",
+  url: "https://mbpub.vercel.app/",
   telephone: "+213553924419",
   email: "mbpublicite31@gmail.com",
   address: {
@@ -44,10 +44,10 @@ const websiteData = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   name: "MB PUB",
-  url: "https://mbpub31.com",
+  url: "https://mbpub.vercel.app/",
   potentialAction: {
     "@type": "SearchAction",
-    target: "https://mbpub31.com/contact",
+    target: "https://mbpub.vercel.app/contact",
     "query-input": "required name=search_term_string",
   },
 };
